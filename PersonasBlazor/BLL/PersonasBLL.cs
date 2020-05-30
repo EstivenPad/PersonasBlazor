@@ -42,7 +42,7 @@ namespace PersonasBlazor.BLL
             return paso;
         }
 
-        private static bool Modificar(Personas persona)
+        public static bool Modificar(Personas persona)
         {
             bool paso = false;
             Contexto contexto = new Contexto();

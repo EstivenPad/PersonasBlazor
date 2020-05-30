@@ -47,7 +47,7 @@ namespace PersonasBlazor.BLL
             return paso;
         }
 
-        private static bool Modificar(Prestamos prestamoActual)
+        public static bool Modificar(Prestamos prestamoActual)
         {
             bool paso = false;
             double auxiliar = 0;

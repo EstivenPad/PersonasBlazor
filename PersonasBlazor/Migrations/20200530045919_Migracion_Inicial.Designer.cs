@@ -9,7 +9,7 @@ using PersonasBlazor.DAL;
 namespace PersonasBlazor.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20200530015139_Migracion_Inicial")]
+    [Migration("20200530045919_Migracion_Inicial")]
     partial class Migracion_Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

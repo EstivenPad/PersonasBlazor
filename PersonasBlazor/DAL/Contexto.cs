@@ -14,7 +14,7 @@ namespace PersonasBlazor.DAL
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite(@"Data Source= DATA\Personas.db");
+            optionsBuilder.UseSqlite(@"Data Source= C:\Users\Padilla\BD\Personas.db");
         }
     }
 }
