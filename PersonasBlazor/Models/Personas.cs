@@ -15,7 +15,7 @@ namespace PersonasBlazor.Models
         public string Nombre { get; set; }
 
         [Phone(ErrorMessage ="El teléfono debe tener el siguiente formato: 999-999-9999")]
-        [StringLength(14, ErrorMessage = "El teléfono debe tener el tamaño correcto", MinimumLength = 13)]
+        [StringLength(14, ErrorMessage = "El teléfono debe tener el tamaño correcto", MinimumLength = 12)]
         [Required(ErrorMessage = "Es obligatorio introducir un telefono")]
         public string Telefono { get; set; }
 
@@ -28,5 +28,8 @@ namespace PersonasBlazor.Models
 
         [Required(ErrorMessage = "Es obligatorio introducir una fecha")]
         public DateTime FechaNacimiento { get; set; }
+                
+        public double Balance { get; set; }
+
     }
 }
