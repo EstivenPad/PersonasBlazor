@@ -15,7 +15,7 @@ namespace PersonasBlazor.BLL.Tests
         {
             bool paso = false;
             Prestamos prestamo = new Prestamos();
-            prestamo.PersonaId = 2;
+            prestamo.PersonaId = 1;
             prestamo.Concepto = "Prueba";
             prestamo.Fecha = DateTime.Now;
             prestamo.Monto = 100;

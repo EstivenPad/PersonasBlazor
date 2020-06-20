@@ -16,6 +16,45 @@ namespace PersonasBlazor.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.4");
 
+            modelBuilder.Entity("PersonasBlazor.Models.Moras", b =>
+                {
+                    b.Property<int>("MoraId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("Fecha")
+                        .HasColumnType("TEXT");
+
+                    b.Property<double>("Total")
+                        .HasColumnType("REAL");
+
+                    b.HasKey("MoraId");
+
+                    b.ToTable("Moras");
+                });
+
+            modelBuilder.Entity("PersonasBlazor.Models.MorasDetalle", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("MoraId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("PrestamoId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<double>("Valor")
+                        .HasColumnType("REAL");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MoraId");
+
+                    b.ToTable("MorasDetalle");
+                });
+
             modelBuilder.Entity("PersonasBlazor.Models.Personas", b =>
                 {
                     b.Property<int>("PersonaId")
@@ -75,16 +114,14 @@ namespace PersonasBlazor.Migrations
 
                     b.HasKey("PrestamoId");
 
-                    b.HasIndex("PersonaId");
-
                     b.ToTable("Prestamos");
                 });
 
-            modelBuilder.Entity("PersonasBlazor.Models.Prestamos", b =>
+            modelBuilder.Entity("PersonasBlazor.Models.MorasDetalle", b =>
                 {
-                    b.HasOne("PersonasBlazor.Models.Personas", "Persona")
-                        .WithMany()
-                        .HasForeignKey("PersonaId")
+                    b.HasOne("PersonasBlazor.Models.Moras", null)
+                        .WithMany("MoraDetalle")
+                        .HasForeignKey("MoraId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

@@ -24,8 +24,5 @@ namespace PersonasBlazor.Models
         public double Monto { get; set; }
 
         public double Balance { get; set; }
-                
-        [ForeignKey("PersonaId")]
-        public virtual Personas Persona { get; set; }
     }
 }
